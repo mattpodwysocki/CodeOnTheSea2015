@@ -21,6 +21,24 @@
 
   var ResultsView = Backbone.View.extend({
     el: $('#results'),
-    template: _.template( $("#search_template").html(), {} )
+    template: _.template( $("#search_template").html(), [] ),
+    render: function () {
+      return this;
+    }
+  });
+
+  var InputView = Backbone.View.extend({
+    el: $('#textInput'),
+    events: {
+      'keyup': 'onInput'
+    },
+    onInput: function(e) {
+      this.model.set(e);
+    }
+  });
+
+  $(function () {
+    var inputView = new InputView();
+    var resultsView = new ResultsView();
   })
 }());
