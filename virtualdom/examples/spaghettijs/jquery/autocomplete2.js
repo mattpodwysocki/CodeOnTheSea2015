@@ -32,7 +32,7 @@
         $results = $('#results');
 
     $input.keyup(debounce(function () {
-      var text = $input.val();
+      var text = $(this).val();
 
       searchWikipedia(text).then(
         function (data) {

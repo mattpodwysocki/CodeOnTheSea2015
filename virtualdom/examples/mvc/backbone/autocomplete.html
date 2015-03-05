@@ -11,9 +11,9 @@
 <body>
   <script id="items-template" type="text/template">
     <ul>
-      {{#each this}}
-      <li>{{this}}</li>
-      {{/each}}
+      <% _.each(results, function(result) { %>
+      <li><%= result.get('data') %></li>
+      <% }); %>
     </ul>
   </script>
 

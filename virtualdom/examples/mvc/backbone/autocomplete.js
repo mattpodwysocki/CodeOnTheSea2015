@@ -19,26 +19,40 @@
     }).promise();
   };
 
+  var List = Backbone.Collection.extend({
+
+  });
+
   var ResultsView = Backbone.View.extend({
-    el: $('#results'),
-    template: _.template( $("#search_template").html(), [] ),
+    model: List,
+    initialize: function(){
+      this.render();
+    },
     render: function () {
-      return this;
+      var template = _.template($("#search_template").html(), this.model);
+      this.$el.html( template );
     }
   });
 
   var InputView = Backbone.View.extend({
-    el: $('#textInput'),
     events: {
       'keyup': 'onInput'
     },
-    onInput: function(e) {
-      this.model.set(e);
+    onInput: function() {
+      this.model.set('result', this.el.val());
     }
   });
 
   $(function () {
-    var inputView = new InputView();
-    var resultsView = new ResultsView();
+    var list = new List('foo','bar','baz');
+
+    var inputView = new InputView({
+      el: $('#textInput'),
+      model: ''
+    });
+    var resultsView = new ResultsView({
+      el: $('#results'),
+      model: list
+    });
   })
 }());

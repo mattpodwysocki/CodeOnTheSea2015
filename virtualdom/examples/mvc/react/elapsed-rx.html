@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../../assets/react-0.12.2/build/react.js"></script>
+    <script src="../../assets/react-0.12.2/build/JSXTransformer.js"></script>
+    <script src="../../assets/rx/rx.lite.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/jsx">
+var Timer = React.createClass({
+  getInitialState: function() {
+    return {secondsElapsed: 0};
+  },
+  componentDidMount: function() {
+    this.subscription = Rx.Observable.interval(1000)
+      .subscribeOnNext(function (x) {
+        this.setState({secondsElapsed: x});
+      }, this);
+  },
+  componentWillUnmount: function() {
+    this.subscription.dispose();
+  },
+  render: function() {
+    return (
+      <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
+    );
+  }
+});
+
+React.render(<Timer />, document.getElementById('example'));

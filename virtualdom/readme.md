@@ -1,27 +1,12 @@
-# Exploring the Reactive Extensions in JavaScript at Applicative 2015
+# RxJS and the Future of Web Applications at Code on the Sea 2015
 
-This is the repository for the presentation [Exploring the Reactive Extensions for JavaScript](http://applicative.acm.org/speaker-MatthewPodwysocki.html) at [Applicative by the ACM 2015 conference](http://applicative.acm.org/).
+This is the repository for the presentation RxJS and the Future of Web Applications at [Code on the Sea 2015](http://www.codeonthesea.com/).
 
 ## Outline
 
-What's does a mouse drag event have in common with an Array of numbers?
-
-The answer to this question may surprise you: they are both collections. This key insight holds the key to dramatically simplifying asynchronous programming in JavaScript. In this talk you will learn how you can use the familiar JavaScript [Array#extras](http://blogs.msdn.com/b/ie/archive/2010/12/13/ecmascript-5-part-2-array-extras.aspx) methods to create surprisingly expressive asynchronous programs. Using just a few functions, you will learn how to do the following:
-
-- Declaratively build complex events out of simple events (ex. drag n' drop)
-- Coordinate and sequence multiple Ajax requests
-- Reactively update UIs in response to data changes
-- Eliminate memory leaks caused by neglecting to unsubscribe from events
-- Gracefully propagate and handle asynchronous exceptions
-
-In this talk we'll be exploring the [Reactive Extensions for JavaScript (RxJS)](https://github.com/Reactive-Extensions/RxJS) library which allows us to treat events as collections. We'll also contrast RxJS with [Promises](http://en.wikipedia.org/wiki/Futures_and_promises), [CSP](http://en.wikipedia.org/wiki/Communicating_sequential_processes) and other popular approaches to building asynchronous programs in JavaScript. We'll also dive into the future with RxJS with generators, transducers, and even query transformations.
+The web frontend scene is witness to many new frameworks and ways of working. It can be quite annoying when software becomes legacy quicker than ever. But actually, it's just good old innovation happening as it should, because the opportunities for improvement are there. Frameworks come and go, but what remains are the good ideas that they brought to the world. We're going to talk about the good ideas and the not so good ideas. React is one of those currently hottest frontend technologies. The new great idea in React is Virtual DOM Rendering. The gist is to frequently re-render a complete and lightweight representation of the DOM, then apply a difference filter to detect the minimum changes that need to be made to the DOM. A similar technique has existed in game development long before React: re-render the game screen in every game loop, but only update the minimum portion of the screen which changed compared to the previously rendered screen. It's hard to speak about React without mentioning Flux, because only with both together can we speak of a complete frontend architecture, since React concerns only user interfaces. Flux contains many ideas, but it can be summarized as an architecture with a unidirectional and circular flow of data. The benefit is code that is easier to follow with regard to data updates. In this talk, we'll talk about combining Reactive Programming by replacing Flux with RxJS for real reactive programming, for more complex state machines, and even explore other options including cycle.js.
 
 ## Demos
-Games:
-- [Alphabet Invasion](https://github.com/Reactive-Extensions/RxJS/tree/master/examples/alphabetinvasion)
-- [Bouncing Balls Using SVG + RxJS](https://github.com/angus-c/rxjs-bouncing-balls)
-- [Mario Elm Example](http://fudini.github.io/rx/mario.html)
-
 [React](http://facebook.github.io/react/) + [Rx-Flux](https://github.com/fdecampredon/rx-flux):
 - [TODO MVC](https://github.com/fdecampredon/rx-flux/tree/master/examples/flux-todomvc)
 - [Chat](https://github.com/fdecampredon/rx-flux/tree/master/examples/flux-todomvc)
@@ -53,6 +38,7 @@ Libraries:
   - [Rx-React](https://github.com/fdecampredon/rx-react)
   - [Rx-Flux](https://github.com/fdecampredon/rx-flux)
   - [RxReact](https://github.com/AlexMost/RxReact)
+  - [ReactiveFlux](https://github.com/codesuki/reactive-flux)
 - [Ember](http://emberjs.com/)
   - [RxEmber](https://github.com/blesh/RxEmber)
 - [AngularJS](https://github.com/Reactive-Extensions/rx.angular.js)

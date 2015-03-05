@@ -1,20 +1,9 @@
-# Exploring the Reactive Extensions in JavaScript at Applicative 2015
+# Reactive Programming for the Rest of Us at Code on the Sea 2015
 
-This is the repository for the presentation [Exploring the Reactive Extensions for JavaScript](http://applicative.acm.org/speaker-MatthewPodwysocki.html) at [Applicative by the ACM 2015 conference](http://applicative.acm.org/).
+This is the repository for the presentation "Reactive Programming for the Rest of Us" at [Code on the Sea 2014](http://www.codeonthesea.com/).
 
 ## Outline
-
-What's does a mouse drag event have in common with an Array of numbers?
-
-The answer to this question may surprise you: they are both collections. This key insight holds the key to dramatically simplifying asynchronous programming in JavaScript. In this talk you will learn how you can use the familiar JavaScript [Array#extras](http://blogs.msdn.com/b/ie/archive/2010/12/13/ecmascript-5-part-2-array-extras.aspx) methods to create surprisingly expressive asynchronous programs. Using just a few functions, you will learn how to do the following:
-
-- Declaratively build complex events out of simple events (ex. drag n' drop)
-- Coordinate and sequence multiple Ajax requests
-- Reactively update UIs in response to data changes
-- Eliminate memory leaks caused by neglecting to unsubscribe from events
-- Gracefully propagate and handle asynchronous exceptions
-
-In this talk we'll be exploring the [Reactive Extensions for JavaScript (RxJS)](https://github.com/Reactive-Extensions/RxJS) library which allows us to treat events as collections. We'll also contrast RxJS with [Promises](http://en.wikipedia.org/wiki/Futures_and_promises), [CSP](http://en.wikipedia.org/wiki/Communicating_sequential_processes) and other popular approaches to building asynchronous programs in JavaScript. We'll also dive into the future with RxJS with generators, transducers, and even query transformations.
+Reactive Programming has been a hot topic as of late, with such things as the Coursera Course taught by Martin Odersky and Erik Meijer, as well as the Reactive Manfiesto (http://www.reactivemanifesto.org/). We see many frameworks such as FlapJax, RxJS, Bacon.JS for middleware, and then on the front end, we start to see UI frameworks such as ReactJS from Facebook, Angular, and Elm. This word Reactive becomes very confusing as it quickly loses its meaning. What exactly does Reactive mean? A simple definition of Reacting to input, events, load, etc is not enough. In this talk, we'll explore some of the basics of Reactive Programming, and explore all the frameworks and languages and how they really are the future of web development.
 
 ## Demos
 Games:
@@ -62,6 +51,10 @@ Libraries:
 - [Dojo 1.7+](https://github.com/Reactive-Extensions/RxJS-Dojo)
 - [ExtJS](https://github.com/Reactive-Extensions/RxJS-ExtJS)
 - [Cycle.js](https://github.com/staltz/cycle)
+
+Other Reactive Libraries:
+- [Elm](http://elm-lang.org/)
+- [Bacon.js](https://github.com/baconjs/bacon.js)
 
 Contact Information:
 - [@ReactiveX](https://twitter.com/ReactiveX)

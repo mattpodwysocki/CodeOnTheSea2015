@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <title>Autocomplete1</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+<script type="text/template" id="search_template">
+  <label>Search</label>
+  <input type="text" id="search_input" />
+  <input type="button" id="search_button" value="Search" />
+</script>
+
+<div id="search_container"></div>
+
+<script src="../../assets/jquery/jquery-1.11.2.min.js"></script>
+<script src="../../assets/underscore/underscore.js"></script>
+<script src="../../assets/backbone/backbone.js"></script>
+<script src="../../assets/rx/rx.lite.js"></script>
+<script type="text/javascript">
+    SearchView = Backbone.View.extend({
+        initialize: function(){
+            this.render();
+        },
+        render: function(){
+            // Compile the template using underscore
+            var template = _.template( $("#search_template").html(), {} );
+            // Load the compiled HTML into the Backbone "el"
+            this.$el.html( template );
+        },
+        events: {
+          "click input[type=button]": "doSearch"
+        },
+        doSearch: function( event ){
+            // Button clicked, you can access the element that was clicked with event.currentTarget
+            alert( "Search for " + $("#search_input").val() );
+        }
+    });
+
+    var search_view = new SearchView({ el: $("#search_container") });
+</script>
+</body>
+</html>
